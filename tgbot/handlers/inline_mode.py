@@ -1,7 +1,3 @@
-import sys
-
-sys.path.append(...)
-
 from aiogram import Dispatcher, types
 from tgbot.services.fontifier import fontify
 from tgbot.fonts_list import fonts_list
@@ -32,5 +28,5 @@ async def inline_fontify(query: types.InlineQuery):
 
 
 def register_inline(dp: Dispatcher):
-    dp.register_message_handler(try_inline, commands='try_inline')
+    dp.register_message_handler(try_inline, commands='inline_mode')
     dp.register_inline_handler(inline_fontify)
