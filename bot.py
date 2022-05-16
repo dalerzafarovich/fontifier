@@ -73,8 +73,6 @@ async def main():
 
 if __name__ == '__main__':
     try:
-        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-        # cmds = [['C:/Windows/system32/HOSTNAME.EXE']]
         asyncio.run(main())
     except (KeyboardInterrupt, SystemExit):
         logger.error("Bot stopped!")
