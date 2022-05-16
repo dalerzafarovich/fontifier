@@ -6,7 +6,7 @@ from tgbot.services.repository import Repo
 
 async def user_start(m: Message, repo: Repo):
     await repo.add_user(m.from_user.id)
-    await m.reply("Hello, user!")
+    await m.reply("Вас приветствует @fontifier_bot. За дополнительной информацией - /info")
 
 
 def register_user(dp: Dispatcher):
