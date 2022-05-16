@@ -29,4 +29,4 @@ async def inline_fontify(query: types.InlineQuery):
 
 def register_inline(dp: Dispatcher):
     dp.register_message_handler(try_inline, commands='inline_mode', state='*')
-    dp.register_inline_handler(inline_fontify)
+    dp.register_inline_handler(inline_fontify, state='*')
